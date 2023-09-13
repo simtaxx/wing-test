@@ -28,17 +28,23 @@ Pour installer le projet vous suivre les instructions suivantes
 
   6. psql -U postgres
 
-  7. CREATE DATABASE wing;
+  7. CREATE USER admin WITH PASSWORD 'admin';
 
-  8. CREATE USER admin WITH PASSWORD 'admin';
+  8. CREATE DATABASE wing;
 
-  9. exit
+  9. \c wing
 
-  10. psql -U postgres wing < wingdb.pgsql
+  10. GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
 
   11. exit
 
-  12. cd .. && npm run dev
+  12. psql -U postgres wing < wingdb.pgsql
+
+  13. exit
+
+  14. cd ..
+
+  15. npm run dev
   ```
 
 ### Utilisation
