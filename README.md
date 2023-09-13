@@ -32,21 +32,17 @@ Pour installer le projet vous suivre les instructions suivantes
 
   9. CREATE DATABASE wing;
 
-  10. \c wing
+  10. exit
 
-  11. GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
+  11. psql -U postgres wing < wingdb.pgsql
 
   12. exit
 
-  13. psql -U postgres wing < wingdb.pgsql
+  13. cd ..
 
-  14. exit
-
-  15. cd ..
-
-  16. npm run dev
+  14. npm run dev
   ```
-  > Si après la commmande 16 "npm run dev" vous avez une erreur, relancez la commande ça
+  > Si après la commmande 14 "npm run dev" vous avez une erreur, relancez la commande ça
   devrait fonctionner
 
 ### Utilisation
