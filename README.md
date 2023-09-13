@@ -13,40 +13,40 @@
 
 Pour installer le projet vous suivre les instructions suivantes
 
-  Une fois le repo cloner rendez vous ici : wing-test/backend
-
   ```
-  1. cp .env.example .env
+  1. cd wing-test/backend
 
-  2. npm i
+  2. cp .env.example .env
 
-  3. cd postgres && docker-compose up -d
+  3. npm i
 
-  4. docker cp wingdb.pgsql postgres:/wingdb.pgsql
+  4. cd postgres && docker-compose up -d
 
-  5. docker exec -it postgres bash
+  5. docker cp wingdb.pgsql postgres:/wingdb.pgsql
 
-  6. psql -U postgres
+  6. docker exec -it postgres bash
 
-  7. CREATE USER admin WITH PASSWORD 'admin';
+  7. psql -U postgres
 
-  8. CREATE DATABASE wing;
+  8. CREATE USER admin WITH PASSWORD 'admin';
 
-  9. \c wing
+  9. CREATE DATABASE wing;
 
-  10. GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
+  10. \c wing
 
-  11. exit
+  11. GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
 
-  12. psql -U postgres wing < wingdb.pgsql
+  12. exit
 
-  13. exit
+  13. psql -U postgres wing < wingdb.pgsql
 
-  14. cd ..
+  14. exit
 
-  15. npm run dev
+  15. cd ..
+
+  16. npm run dev
   ```
-  > Si après la commmande 15 "npm run dev" vous avez une erreur, relancez la commande ça
+  > Si après la commmande 16 "npm run dev" vous avez une erreur, relancez la commande ça
   devrait fonctionner
 
 ### Utilisation
