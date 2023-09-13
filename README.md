@@ -46,6 +46,8 @@ Pour installer le projet vous suivre les instructions suivantes
 
   15. npm run dev
   ```
+  > Si après la commmande 15 "npm run dev" vous avez une erreur, relancez la commande ça
+  devrait fonctionner
 
 ### Utilisation
 
